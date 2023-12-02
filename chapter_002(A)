@@ -1,0 +1,20 @@
+// Demonstrate data types range and size.
+import java.lang.*;
+
+class DTAR
+{
+     public static void main(String arg[])
+     {
+           System.out.println("Integeral max value is : " +Integer.MAX_VALUE);
+           System.out.println("Integeral min value is : " +Integer.MIN_VALUE);
+           System.out.println("Integeral byte value is : " +Integer.BYTES);
+
+           System.out.println("bytes max value is : " + Byte.MAX_VALUE);
+           System.out.println("bytes min value is : " + Byte.MIN_VALUE);
+           System.out.println("bytes  byte value is : " + Byte.BYTES);
+
+           System.out.println("float max value is : " + Float.MAX_VALUE);
+           System.out.println("float min value is : " + Float.MIN_VALUE);
+           System.out.println("float byte value is : " + Float.BYTES);
+     }
+}

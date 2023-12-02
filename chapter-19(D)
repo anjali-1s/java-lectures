@@ -1,0 +1,42 @@
+// Write a java program to demonastrate daemon methods.
+
+class Mythread extends Thread{
+     public void run(){
+          int count = 1;
+          while(true){
+               System.out.println(count++);
+               try{
+               Thread.sleep(100);
+             }   
+          catch(Exception e){
+          System.out.println(e);
+         } 
+          }
+     }
+}
+
+public class Daemon {
+     public static void main(String args[])   throws Exception {
+     Mythread t = new Mythread();
+     t.setDaemon(true);
+     t.start();
+     Thread mainThread = Thread.currentThread();
+     mainThread.join();
+     mainThread.start();
+     int count = 1;
+     while(true)
+     {
+          System.out.println(count++ + "main");
+          try{
+          Thread.sleep(100);
+         }   
+          catch(Exception e){
+          System.out.println(e);
+        } 
+         Thread.yield();
+     }
+     
+     }
+}
+
+

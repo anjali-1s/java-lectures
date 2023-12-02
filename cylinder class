@@ -1,0 +1,36 @@
+// Write a java program to write a class for a cylinder.
+
+public class cylinder {
+     public double height;
+     public double radius;
+
+     public double lidSurfacearea()
+     {
+          return Math.PI *  radius * radius;
+     }
+
+     public double circumference ()
+     {
+          return  2 * Math.PI * radius;
+     }
+     public double volume()
+     {
+          return height * lidSurfacearea();
+     }
+
+     public static void main(String args[])
+     {
+          cylinder c1 = new cylinder();
+          c1.radius = 4.18;
+          c1.height = 18;
+          System.out.println(c1.circumference());
+          System.out.println(c1.volume());
+
+          cylinder c2 = new cylinder();
+          System.out.println(c2.volume());
+          System.out.println(c2.lidSurfacearea());
+     }
+
+}
+
+

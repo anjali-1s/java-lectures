@@ -1,0 +1,30 @@
+// Write a java program to demonastrate throw and throws.
+
+public class Throw_Throws {
+      static int meth1()
+      {
+          return 10/0;
+      }
+
+      static int meth2()
+      {
+         return  meth1();
+      }
+
+      static int meth3()
+      {
+          return meth2();
+      }
+
+     public static void main(String args[])
+     {
+          try{
+               System.out.println(meth3());
+          }
+
+          catch(Exception e)
+          {
+               System.out.println(e);
+          }
+     }
+}

@@ -1,0 +1,41 @@
+// Write a java program to demonastrate checked_unchecked.
+
+class LowBalanceException extends Exception
+{
+     public String toString()
+     {
+          return "Balance should not be les than 5000";
+     }
+}
+
+public class checked_unchecked {
+           static void fun1()
+           {
+               try{
+                    int balance = 1000;
+                    if(balance < 5000)
+                    {
+                    throw new LowBalanceException();
+               }
+          }
+               catch(LowBalanceException e)
+               {
+                    System.out.println(e);
+               }
+           }
+           
+           static void fun2()
+           {
+               fun1();
+           }
+
+           static void fun3()
+           {
+               fun2();
+           }
+
+           public static void main(String args[])
+           {
+               fun3();
+           }
+}

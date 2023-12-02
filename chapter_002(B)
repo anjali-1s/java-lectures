@@ -1,0 +1,19 @@
+// Demonastrate variables declaration and its initialiazation.
+
+import java.lang.*;
+
+class Variable
+{
+     public static void main(String arg[])
+     {
+           int i = 9;
+           byte b = 127;
+           float f = 0.8f;
+           char ch = 'A';
+            System.out.println("value of i is :" + i);
+            System.out.println("value of b is :" + b);
+            System.out.println("value of f is :" + f);
+            System.out.println("value of ch is :" + ch);
+
+     }
+}

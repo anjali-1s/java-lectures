@@ -1,0 +1,27 @@
+// Write a java program to practice the static members.
+
+class test{
+    static int x = 10, y = 20;
+    int z = 30;
+
+    void show()
+    {
+     System.out.println(x + " " + y + " " + z);
+    }
+
+    static void display()
+    {
+     System.out.println(x + " " + y);
+    }
+}
+
+public class S_practice {
+       public static void main(String args[])
+       {
+          test t1 = new test();
+          t1.show();
+          test t2 = new test();
+          t2.show();
+
+       }
+}

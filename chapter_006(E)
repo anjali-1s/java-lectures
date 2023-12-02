@@ -1,0 +1,15 @@
+// Write a java program to print the values of some variables with argument index.
+
+import java.lang.*;
+import java.util.Scanner;
+class Printing
+{
+public static void main(String[] args)
+{
+   int x = 254;
+   float y = 125.49999999f;
+   String str = "Hello";
+   System.out.printf("%1$d  %2$f  %3$s \n ",x,y,str);
+   System.out.printf("%3$s   %2$f  %1$d \n",x,y,str);
+}
+}

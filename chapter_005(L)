@@ -1,0 +1,21 @@
+// Write a program to demonstrate widening and narrowing.
+import java.lang.*;
+import java.util.Scanner;
+class Printing
+{
+public static void main(String[] args)
+{
+   byte b = 10;
+   short s = 10;
+   int i = 10;
+   float f = 10.5f;
+   double d = 10;
+   char c = 'A';
+   boolean bl = true;
+   i = (int) f;
+   System.out.println(i);
+   f = (float)d;
+   System.out.println(f);
+}
+}
+

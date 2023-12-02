@@ -1,0 +1,29 @@
+// Write a java program to demonastrate Throw and Throws.
+
+public class ThrowThrowsdemo {
+       static void Area(int l,int b)    throws Exception{
+          
+          if(l < 0 || b < 0){
+             int c = l * b;
+             System.out.println(c);
+          }  
+       }
+
+
+ class NegativeDimensionsException extends Exception{
+     public String toString(){
+          return "Dimensions should not be negative";
+       }
+ }
+
+       public static void main(String args[])
+       {       
+          try{
+               Area(-10,5);
+     } 
+          catch(Exception e)
+          {
+               System.out.println(e);
+          }
+       }
+}

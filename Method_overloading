@@ -1,0 +1,19 @@
+class Area_overloading {
+    static double Area(double radius)
+    {
+     return Math.PI * radius * radius;
+    }
+
+    static double Area(double length, double breadth)
+    {
+        return length * breadth;
+    }
+
+    public static void main(String arg[])
+    {
+        double radius = 42.2;
+        System.out.println("The area of the circle is " + " " + Area(radius));
+        double length = 12.2, breadth = 24.5;
+        System.out.println("The area of the rectangle is " + " " + Area(length,breadth));
+    }
+}

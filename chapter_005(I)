@@ -1,0 +1,16 @@
+// Write a java program to demonstrate shift operator.
+
+public class shift {
+     public static void main(String args[])
+     {
+          int x = 010;
+          int y;
+          y = x << 2;
+          System.out.println(y);
+          int a = -001010;
+          int b;
+          b = a >> 1;
+          System.out.println(b);
+          System.out.println(String.format("%s",Integer.toBinaryString(b)));
+     }
+}

@@ -1,0 +1,22 @@
+// Write a java program to demonastrate finally block.
+
+public class finally_demo {
+       static void meth1()   throws Exception{
+          try{
+               throw new Exception();
+          }
+
+          catch(Exception e)
+          {
+               System.out.println(e);
+          }
+          finally{
+               System.out.println("final message");
+          }
+       }
+
+       public static void main(String args[])   throws Exception
+       {
+          meth1();
+       }
+}

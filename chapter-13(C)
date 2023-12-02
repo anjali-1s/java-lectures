@@ -1,0 +1,63 @@
+// Write a java program to demonastrate student class example of shape class.
+
+abstract class shape{
+     public double radius;
+     public int length, breadth;
+     shape()
+     {
+          System.out.println("shape super class constructor");
+     }
+     abstract double perimeter();
+     abstract double area();
+}
+
+class circle extends shape{
+     
+     circle()
+     {
+          System.out.println("circle class constructor");
+     }
+
+     double perimeter()
+     {
+         return 2 * Math.PI * radius;
+     }
+
+     double area ()
+     {
+          return Math.PI * radius * radius;
+     }
+}
+
+class rectangle extends shape{
+     rectangle()
+     {
+          System.out.println("rectangle class constructor");
+     }
+
+     double area()
+     {
+          return length * breadth;
+     }
+
+     double perimeter()
+     {
+          return 2 * (length + breadth);
+     }
+}
+
+public class Student_class_example {
+     public static void main(String args[])
+     {
+          shape c = new circle();
+          c.radius = 12.12;
+          System.out.println(c.area());
+          System.out.println(c.perimeter());
+
+          shape r = new rectangle();
+          r.length = 10;
+          r.breadth = 29;
+          System.out.println(r.area());
+          System.out.println(r.perimeter());
+     }
+}

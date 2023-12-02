@@ -1,0 +1,25 @@
+// Write a java program to find the area and volume of a cuboid.
+
+import java.lang.*;
+import java.util.Scanner;
+
+class Cuboid
+{
+   public static void main(String args[])
+{
+    Scanner sc = new Scanner(System.in);
+    int l,b,h;
+    int TotalArea,volume;
+    System.out.println("Enter the value of a , b  and c :");
+    l = sc.nextInt();
+    b = sc.nextInt();
+    h = sc.nextInt();
+    
+   TotalArea = 2 * (l * b + b * h + h * l);
+   volume = l * b * h;
+   System.out.println("Area of a cuboid is :" +  " " + TotalArea);
+   System.out.println("volume of a cuboid is :" + " " + volume);
+}
+}
+
+    

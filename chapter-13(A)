@@ -1,0 +1,30 @@
+// Write a java program to demonastrate abstract classes.
+
+abstract class Super{
+     public  Super()
+      {
+     System.out.println("Super class constructor");
+      }
+
+      public void meth1()
+      {
+          System.out.println("method 1 of Super class");
+      }
+}
+
+class sub extends Super{
+     public void meth2()
+     {
+          System.out.println("method 2 of sub class");
+     }
+}
+
+public class Abstract_example {
+     public static void main(String arg[])
+     {
+        Super s = new sub();
+        s.meth1();
+
+     }
+     }
+

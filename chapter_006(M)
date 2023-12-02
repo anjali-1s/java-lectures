@@ -1,0 +1,22 @@
+//A.) Write a program to remove special characters from a string.
+//B.) Write a program to remove extra spaces from string.
+//C.) Write a program to find number of words in a string.
+
+public class String_Quantifiers3 {
+     public static void main(String args[])
+     {
+          // A.) --solution
+          String str = "a!B@c#1$2%3";
+          System.out.println(str.replaceAll("[a^zAtoZ0-9]",""));
+
+          // B.) --solution
+          String str1 = "    abc    def    gh    ijk";
+          System.out.println(str1.replaceAll("\\s+"," ").trim());    
+
+          // C.) --solution
+          String str2 = "   abc    def    gh   ijk    ";
+          String str3 = str2.replaceAll("\\s+"," ").trim();
+          String Words[] = str3.split("\\s");
+          System.out.println(Words.length);
+     }
+}

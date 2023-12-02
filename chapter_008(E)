@@ -1,0 +1,17 @@
+// write a java program to print the digits of a given number.
+import java.util.Scanner;
+public class NumDigits {
+    public static void main(String arg[])
+    {
+     Scanner sc = new Scanner(System.in);
+     int num = sc.nextInt();
+     int digits;
+     System.out.println("The digits of the given number are :" );
+     while(num > 0)
+     {
+          digits = num % 10;
+          System.out.println(digits);
+          num = num / 10;
+     }
+    } 
+}

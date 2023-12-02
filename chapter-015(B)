@@ -1,0 +1,26 @@
+// Write a java program to demonastrate local inner classes.
+
+ class outer{
+
+        public  void  display()
+     {
+          class inner{
+               void innerdisplay()
+               {
+                    System.out.println("Hello");
+               }
+          }
+                   inner i = new inner();
+                   i.innerdisplay();
+     }
+}
+
+public class Local_inner
+{
+     public static void main(String args[])
+     {
+          outer o = new outer();
+          o.display();
+     }
+}
+

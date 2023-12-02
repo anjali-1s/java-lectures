@@ -1,0 +1,25 @@
+// Write a java programs to demonastrate constructor.
+
+class parent
+{
+    public parent()
+    {
+     System.out.println("parent constructor");
+    }
+}
+
+ class child extends parent{
+     public child()
+     {
+          System.out.println("child constructor");
+     }
+}
+
+public class constructors{
+     public static void main(String args[])
+     {
+          parent p = new parent();
+          System.out.println();
+          child c = new child();
+     }
+}

@@ -1,0 +1,14 @@
+// Write a java program to add two numbers and print it's result in string statement format.
+import java.lang.*;
+import java.util.Scanner;
+class Printing
+{
+public static void main(String[] args)
+{
+    Scanner sc = new Scanner(System.in);
+    int a,b;
+    a = sc.nextInt();
+    b = sc.nextInt();
+    System.out.println("The sum of" + a + " " + "and" +" " + b  + " " + "is" + " " +(a+b));
+}
+}

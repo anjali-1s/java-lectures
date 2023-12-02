@@ -1,0 +1,22 @@
+// Write a java program to demonastrate method overloading which is compile time polymorphism.
+class overloading{
+  
+    public  int max(int a,int b)
+     {
+       return a>b?a:b;
+     }
+
+     public int max(int a,int b, int c)
+     {
+          if(a > b && a > c)    return a;
+          else if(b > c)        return b;
+          return c;
+     }
+}
+
+public class polymorphism {
+     public static void main(String args[])
+     {
+       overloading ov = new overloading();
+       System.out.println(ov.max(10,20));
+       System.out.println(ov.max(10,30,29));

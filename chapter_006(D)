@@ -1,0 +1,16 @@
+// Write a java Program to print the given statement with given values using format specifier.
+import java.lang.*;
+import java.util.Scanner;
+class Printing
+{
+public static void main(String[] args)
+{
+    int x = 10;
+    float y = 12.56f;
+    char z = 'A';
+    System.out.printf("Hello  %d   %f  %c  world  \n ",x,y,z);
+    System.out.printf("Hello  %o   %f   %c   world  \n ", x,y,z);
+    System.out.printf("Hello   %x  %f   %c   world  \n ", x,y,z);
+    System.out.printf("Hello   %e  world  \n ", y);
+}
+}

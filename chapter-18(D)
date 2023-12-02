@@ -1,0 +1,22 @@
+// Write a java program to demonastrate multiple try and catch blocks.
+
+public class Multiple_catch_try {
+     public static void main(String args[])
+     {
+          try {
+          int arr[] = {2,0,4,5,6};
+          int r = arr[0]/arr[10];
+          System.out.println(r);
+     }
+      
+     catch(ArithmeticException e)
+     {
+          System.out.println(e);
+     }
+
+     catch (ArrayIndexOutOfBoundsException e)
+     {
+           System.out.println(e);
+     }
+}
+}

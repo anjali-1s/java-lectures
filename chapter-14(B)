@@ -1,0 +1,68 @@
+// Write a java program to demonastrate smartphone example.
+class phone{
+     public void call()
+     {
+          System.out.println("phone call");
+     }
+
+     public void sms()
+     {
+          System.out.println("phone is sending sms");
+     }
+}
+
+interface Icamera{
+     void click();
+     void record();
+}
+
+interface ImusicPlayer{
+     void play();
+     void stop();
+}
+
+class smartphones extends phone implements Icamera,ImusicPlayer{
+     public void videocall()
+     {
+          System.out.println("smartphone videocalling");
+     }
+
+     public void click()
+     {
+          System.out.println("clicking pic");
+     }
+
+     public void record()
+     {
+          System.out.println("smartphone is recording");
+     }
+
+     public void play()
+     {
+          System.out.println("smartphone is playing songs");
+     }
+
+     public void stop()
+     {
+          System.out.println("stop the video!");
+     }
+}
+
+public class Interface_example {
+    public static void main(String args[])
+    {
+     smartphones sp = new smartphones();
+     sp.play();
+     sp.sms();
+
+     phone p = new smartphones();
+     p.sms();
+
+     Icamera IC = new smartphones();
+     IC.click();
+
+     ImusicPlayer IMP = new smartphones();
+     IMP.play();
+     IMP.stop();
+    }    
+}

@@ -1,0 +1,29 @@
+// Write a java program to demonastrate nested inner classes.
+class outer {
+     int x = 10;
+     Inner i = new Inner();
+     class Inner{
+          int y = 20;
+          public void innerdisplay()
+          {
+               System.out.println(x + " " + y);
+          }
+     }
+     public void outerdisplay()
+     {
+          i.innerdisplay();
+          System.out.println(i.y);
+     }
+}
+
+public class Nested_inner {
+     public static void main(String args[])
+     {
+          outer o = new outer();
+          o.outerdisplay();
+
+          outer.Inner oi = new outer().new Inner();
+
+          oi.innerdisplay();
+     }     
+}

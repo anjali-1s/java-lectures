@@ -1,0 +1,31 @@
+// Write a java program to insert an element in array.
+import java.lang.*;
+public class Array_insertion {
+    public static void main(String arg[])
+    {
+     int arr[] = new int[10];
+     arr[0] = 5;
+     arr[1] = 7;
+     arr[2] = 9;
+     arr[3] = 8;
+     arr[4] = 6;
+     int n = 5;
+       for(int i = 0; i < n; i++)
+       System.out.print(arr[i] + ",");
+       System.out.println(" ");
+
+
+       int x = 34;
+       int index = 2;
+       for(int i = n ; i > index; i--)
+       {
+          arr[i] = arr[i - 1];
+          arr[index] = x;
+       }
+        System.out.println(" ");
+       for(int y : arr )
+       
+          System.out.print(y + ",");
+       
+    } 
+}

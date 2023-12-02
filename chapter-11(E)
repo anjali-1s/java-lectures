@@ -1,0 +1,59 @@
+// Write a java program to demonastrate data hiding.
+class rectangle
+{
+     private double length;
+     private double breadth;
+
+     public double getlength()
+     {
+          return length;
+     }
+
+     public double getbreadth()
+     {
+          return breadth;
+     }
+
+     public void setlength(double l)
+     {
+          if(l >= 0)
+          length = l;
+     }
+
+     public void setbreadth(double b)
+     {
+          breadth = b;
+     }
+
+     public double area()
+     {
+          return length * breadth;
+     }
+
+     public double perimeter()
+     {
+          return 2 * (length + breadth);
+     }
+
+     public boolean isSquare()
+     {
+          if(length == breadth)
+             return true;
+          else 
+             return false;
+     }
+}
+
+class data_hiding
+{
+     public static void main(String args[])
+     {
+          rectangle r = new rectangle();
+          r.setlength(10.9);
+          r.setbreadth(19.9);
+
+          System.out.println("Area :" + " " + r.area());
+          System.out.println("Perimeter :" + " " + r.perimeter());
+          System.out.println("isSquare :" + " " + r.isSquare()); 
+     }
+}

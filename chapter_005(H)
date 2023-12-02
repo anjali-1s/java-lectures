@@ -1,0 +1,21 @@
+// Write a java program to demonstrate Bitwise Operator.
+
+import java.lang.*;
+
+class  BitwiseOperator
+{
+    public static void main(String args[])
+{
+     int x = 10,y = 6;
+     int z;
+     z = x & y;
+     System.out.println("The value of z is :" + " " + z);
+     int a = 10, b = 6;
+     int c = a | b;
+     System.out.println("The value of c is :" + " " + c);
+     int num1 = 10, num2 = 6;
+     int num3 = num1 ^ num2;
+     System.out.println("The value of num3 is :" + " " + num3);
+}
+
+}

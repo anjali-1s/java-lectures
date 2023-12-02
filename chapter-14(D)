@@ -1,0 +1,31 @@
+// Write a java program to demonastrate default method example.
+interface test{
+       final static int X = 10;
+       public abstract void meth1();
+       public abstract void meth2();
+
+       default void meth3()
+       {
+          System.out.println("default methods");
+       }
+}
+
+interface test2 extends test1{
+     void meth4();
+}
+
+class my implements test2{
+     public void meth1() { System.out.println("hello world");  }
+     public void meth2() { System.out.println("hello universe"); }
+     public void meth4() { System.out.println("hello dosto"); }
+}
+
+public class default_methods {
+    public static void main(String args[])
+    {
+     System.out.println(test.X);
+     my m = new my();
+     m.meth4();
+
+    }    
+}

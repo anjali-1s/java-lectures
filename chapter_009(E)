@@ -1,0 +1,27 @@
+// Write a java program to find the second largest element in the given array.
+
+import java.lang.*;
+
+public class Second_largest {
+    public static void main(String arg[])
+    {
+     int arr[] = {3,5,7,9,12,24,18,19};
+     int max1,max2;
+     max1 = max2 = arr[0];
+
+     for(int i = 0; i < arr.length; i++)
+     {
+          if(arr[i] > max1)
+          {
+               max2 = max1;
+               max1 = arr[i];
+          }
+
+          else if(arr[i] > max2)
+          {
+               max2 = arr[i];
+          }
+     }
+     System.out.println("The second largest element of the given array is :" + max2);
+    } 
+}

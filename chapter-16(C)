@@ -1,0 +1,17 @@
+// Write a java program to demonastrate static block.
+
+public class S_block {
+     static 
+     {
+          System.out.println("Block 1");
+     }
+
+     public static void main(String args[])
+     {
+          System.out.println("main");
+     }
+
+     static {
+          System.out.println("Block 2");
+     }
+}

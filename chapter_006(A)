@@ -1,0 +1,16 @@
+// Write a java program to print the given values using printing method of out object of System class.
+import java.lang.*;
+
+class Printing
+{
+public static void main(String[] args)
+{
+    int a = 10;
+    float b = 12.55f;
+    char c = 'A';
+    String str = "Hello";
+    System.out.println(a);
+    System.out.println(b);
+    System.out.println(c);
+}
+}

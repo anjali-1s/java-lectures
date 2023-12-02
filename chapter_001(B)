@@ -1,0 +1,16 @@
+// Addition of two numbers
+import java.lang.*;
+import java.util.*;
+class Addition
+{
+    public static void main(String arg[])
+{
+      Scanner sc = new Scanner(System.in);
+      int a,b,c;
+      a = sc.nextInt();
+      b = sc.nextInt();
+      c = a + b;
+      System.out.println("sum is" + c);
+}
+
+}

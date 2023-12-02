@@ -1,0 +1,41 @@
+// Write a java program to demonastrate Thread methods,constructors,sleep interrupt.
+
+class Mythread extends Thread{
+     public Mythread(String name)
+     {
+          super(name);
+          setPriority(Thread.MIN_PRIORITY + 2);
+     }
+
+     public void run(){
+               int count = 1;
+               while(true)
+               {
+                    System.out.println(count++);
+                    try{
+                         Thread.sleep(100);
+                    }
+                    catch(Exception e){
+                         System.out.println(e);
+                    }
+               }
+          }
+}
+
+public class Thread_methods {
+     public static void main(String args[])   throws Exception
+     {
+       Mythread t = new Mythread("Anjali Singh");
+       t.start();
+       System.out.println("Name" +" " + t.getName());
+       System.out.println("ID" + " " + t.getId());
+       System.out.println("priority" +" " +  t.getPriority());
+       t.start();
+       System.out.println("State" + " " + t.getState());
+       System.out.println("Alive" + " " + t.isAlive());
+       System.out.println("Daemon" +" "+ t.isDaemon());
+       System.out.println("interrupt" +" "+ t.isInterrupted());
+        
+       
+     }
+}

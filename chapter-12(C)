@@ -1,0 +1,39 @@
+// Write a java program to demonastrate parameterized constructor.
+class parent 
+{
+     parent()
+     {
+          System.out.println("non-parametrized constructor");
+     }
+
+     parent(int x)
+     {
+          System.out.println("param of parent" + " " + x);
+     }
+}
+
+class child extends parent{
+     child()
+     {
+          System.out.println("non - parameterized constructor");
+     }
+
+     child(int y)
+     {
+          System.out.println("parameterized constructor");
+     }
+
+     child(int x,int y)
+     {
+          super(x);
+          System.out.println("2 parametrized constructor" + " " + x + " " + y);
+     }
+}
+
+public class parameterized_constructor {
+     public static void main(String args[])
+     {
+         child c = new child(10);
+         child ch = new child(19,20);
+     }
+}

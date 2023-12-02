@@ -1,0 +1,32 @@
+// Write a java program to demonastrate interfaces.
+interface test1{
+     void meth1();
+     void meth2();
+}
+
+class test2 implements test1{
+     public void meth1()
+     {
+          System.out.println("meth1 of test1");
+     }
+
+     public void meth2()
+     {
+          System.out.println("meth2 of test1");
+     }
+
+     public void meth3()
+     {
+          System.out.println("meth3 of test2");
+     }
+}
+
+public class Interface
+{
+     public static void main(String args[])
+     {
+          test1 t = new test2();
+          t.meth1();
+          t.meth2();
+     }
+}

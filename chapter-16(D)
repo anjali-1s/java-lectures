@@ -1,0 +1,27 @@
+// Write a java program to demonastrate final members.
+
+ class F_demo {
+     final float PI;
+     public F_demo ()
+     {
+           PI = 3.1425f;
+     }
+}
+
+class test{
+     public final void show()
+     {
+          System.out.println("Hello");
+     }
+}
+
+public class F_members
+{
+     public static void main(String args[])
+     {
+          F_demo fd = new F_demo();System.out.println(fd.PI);
+
+          test t1 = new test();
+          t1.show();
+     }
+}

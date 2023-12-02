@@ -1,0 +1,30 @@
+// Write a java program to string methods.
+public class String_Methods 
+{
+     public static void main(String args[])
+     {
+        String str1 = new String("netbeans");
+        int length = str1.length();
+        System.out.println(length);
+        System.out.println(str1.length());
+
+        String str2 = str1.toLowerCase();
+        System.out.println(str2);
+
+        String str3 = str1.toUpperCase();
+        System.out.println(str3);
+
+        String str = "     Welcome      ";
+        str = str.trim();
+        System.out.println(str);
+
+        String str4 = "Continuous";
+        System.out.println(str4);
+        System.out.println(str4.substring(3,6));
+      
+        String str5 = new String("Dr atkar");
+        System.out.println(str5);
+        String str6 = str5.replace('a','o');
+        System.out.println(str6);
+     }
+}

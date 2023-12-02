@@ -1,0 +1,42 @@
+// Write a java program to demonastrate inheritance.
+class circle1 {
+     private double radius;
+     circle1()
+     {
+         radius = 12.3;
+     }
+
+     public double area()
+     {
+          return Math.PI * radius * radius;
+      }
+
+      public double parameter()
+      {
+          return 2 * Math.PI * radius;
+      }
+}
+
+class cylinder extends circle1
+{
+      private double height;
+      cylinder()
+      {
+          height = 12.3;
+      }
+
+      public double volume()
+      {
+          return area() * height;
+      }
+ }
+
+ class circle
+ {
+      public static void main(String args[])
+      {
+          cylinder C = new cylinder();
+          System.out.println(C.volume());
+
+      }
+ }

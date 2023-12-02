@@ -1,0 +1,64 @@
+// Write a java program to demonastrate singleton classes.
+
+class coffeemachine{
+     private float coffeeQty;
+     private float waterQty;
+     private float sugarQty;
+     private float milkQty;
+
+     static private coffeemachine our = null;
+
+     private coffeemachine()
+     {
+          coffeeQty = 1;
+          waterQty = 1;
+          sugarQty = 1;
+          milkQty = 1;
+     }
+
+     public float getcoffee()
+     {
+          return 0.23f;
+     }
+
+     public void fillwater(float qty)
+     {
+          waterQty = qty;
+     }
+
+     public void fillcoffee(float qty)
+     {
+         coffeeQty = qty;
+     }
+
+     public void fillsugar(float qty)
+     {
+          sugarQty = qty;
+     }
+
+     public void fillmilk(float qty)
+     {
+          milkQty = qty;
+     }
+
+     static coffeemachine getInstance()
+     {
+          if(our == null)
+               our = new coffeemachine();
+               return our;
+     }
+}
+
+
+public class singleton {
+     public static void main(String args[])
+     {
+          coffeemachine m1 = coffeemachine.getInstance();
+          coffeemachine m2 = coffeemachine.getInstance();
+          coffeemachine m3 = coffeemachine.getInstance();
+
+          if(m1 == m2 && m1 == m3)
+          System.out.println("same");
+          
+     }
+}

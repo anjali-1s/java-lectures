@@ -1,0 +1,14 @@
+// demonastrate the rules to declare variables.
+import java.lang.*;
+
+class VariablesRule
+{
+     public static void main(String arg[])
+{
+        int X;
+        int x;
+        byte  Roll$Number;
+        char Roll$Number_Marks_Sheet$name;
+        float averageMarksOfClass;
+}
+}

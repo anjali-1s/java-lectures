@@ -1,0 +1,29 @@
+// Write a java program to demonastrate multithreading using runnable interface.
+
+class MyRunnable implements Runnable{
+     public void run()
+     {
+          int i = 1;
+          while(true)
+          {
+               System.out.println(i + "Hello");
+               i++;
+          }
+     }
+}
+
+public class Threadtest {
+   public static void main(String args[])
+   {
+      MyRunnable r = new MyRunnable();
+      Thread t = new Thread();
+      t.start();
+      int i = 1;
+      while(true)
+      {
+          System.out.println(i + "world");
+          i++;
+      } 
+
+   }  
+}

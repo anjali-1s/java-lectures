@@ -1,0 +1,16 @@
+// Write a java program to swap two values using XOR operator.
+import java.lang.*;
+import java.util.Scanner;
+class Printing
+{
+public static void main(String[] args)
+{
+   int a = 10,b = 15;
+   System.out.println("The value of " +" "+a + "and"+" "+b+" "+"before swapping");
+   a = a^b;
+   b = a^b;
+   a = a^b;
+   System.out.println("The value of " +" "+a + "and"+" "+b+" "+"after swapping");
+}
+}
+

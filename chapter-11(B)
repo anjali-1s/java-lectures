@@ -1,0 +1,38 @@
+// Write a java program to write class for a rectangle.
+
+public class rectangle {
+     public int length;
+     public int breadth;
+
+     public int area()
+     {
+          return length*breadth;
+     }
+
+     public int perimeter()
+     {
+          return 2 * (length + breadth); 
+     }
+
+     public boolean isSquare()
+     {
+        if(length == breadth)
+        {
+          return true;
+        }
+        else{
+         return false;
+        } 
+     }
+
+     public static void main(String args[])
+     {
+          rectangle r1 = new rectangle();
+          r1.length = 12;
+          r1.breadth = 11;
+          System.out.println(r1.isSquare());
+          System.out.println(r1.perimeter());
+          System.out.println(r1.area());
+
+     }
+}

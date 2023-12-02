@@ -1,0 +1,19 @@
+// Write a java program to find GCD/HCF of two numbers.
+class GCD {
+     static int gcd(int m, int n)
+     {
+         while(m != n)
+         {
+          if(m > n)   m = m - n;
+          else        n = n - m;
+         }
+
+            return m;
+     }
+
+     public static void main(String arg[])
+     {
+          System.out.println(gcd(35,56));
+          System.out.println(gcd(40,48));
+     }
+}

@@ -1,0 +1,31 @@
+// Write a java program to demonastrate static members.
+
+class Hondacity
+{
+     static long price = 10;
+     int a,b;
+
+     static double onRoadPrice(String city)
+     {
+          switch(city)
+          {
+
+               case "delhi" :
+                    return price + price * 0.1;
+               case "mumbai":
+                    return price + price * 0.9;
+          }
+             return price;
+     }
+
+public class test
+     {
+          public static void main(String args[])
+          {
+               Hondacity h1 = new Hondacity();
+               Hondacity h2 = new Hondacity();
+               System.out.println(Hondacity.price);
+               System.out.println(Hondacity.onRoadPrice("delhi"));
+          }
+     }
+}

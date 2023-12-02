@@ -1,0 +1,53 @@
+// Write a java program to demonastrate parameterized constructor.
+class constructor
+{
+   public int length;
+   public int breadth;
+
+   public  constructor()
+   {
+     length = breadth = 1;
+   }
+
+   public  constructor(int l, int b)
+   {
+      length = l;
+      breadth = b;
+   }
+}
+
+class cuboid extends  constructor{
+     public int height;
+     cuboid()
+     {
+          height = 1;
+     }
+
+     cuboid(int h)
+     {
+          height = h;
+     }
+
+     cuboid(int l,int b, int h)
+     {
+          super(l,b);
+          height = h;
+     }
+
+     int volume()
+     {
+          return length * breadth * height;
+     }
+}
+
+public class rectangle {
+     public static void main(String args[])
+     {
+        cuboid c1 = new cuboid();
+        System.out.println(c1.volume()); 
+        cuboid c2 = new cuboid(10);
+        System.out.println(c2.volume()); 
+        cuboid c3 = new cuboid(10,20,30);
+        System.out.println(c3.volume()); 
+     }
+}

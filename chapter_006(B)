@@ -1,0 +1,14 @@
+// Write a java Program to printing tha string values with integer values through concatenation.
+import java.lang.*;
+
+class Printing
+{
+public static void main(String[] args)
+{
+    int x = 10;
+    int y = 20;
+    System.out.println("Sum" + " "+ x + y);
+    System.out.println("Sum" + " " +(x+y));
+    System.out.println(x + y +" " + "Sum");
+}
+}

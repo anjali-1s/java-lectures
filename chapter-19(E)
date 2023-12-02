@@ -1,0 +1,67 @@
+// Write a java program to solve ATM challange problem.
+
+class ATM{
+    synchronized public void checkBalance(String name){
+          System.out.println(name + " " + "checking");
+          try{
+               Thread.sleep(100);
+          }
+
+          catch(Exception e){
+               System.out.println(e);
+          }
+          System.out.println("Balance");
+     }
+
+     synchronized public void withdraw(String name,int amount){
+          System.out.println(name + " " + "withdrawing");
+          try{
+               Thread.sleep(100);
+          }
+          catch (Exception e){
+               System.out.println(e);
+          }
+          System.out.println(amount);
+     }
+}
+
+class customer extends Thread{
+     String name;
+     int amount;
+     ATM atm;
+
+     customer(String n, ATM a, int amt){
+          name = n;
+          atm = a;
+          amount = amt;
+     }
+
+     public void useATM(){
+          atm.checkBalance(name);
+          atm.withdraw(name,amount);
+     }
+
+     public void run(){
+          useATM();
+     }
+}
+
+public class ATM_challange {
+     public static void main(String args[]){
+          ATM atm = new ATM();
+          customer c1 = new customer("smith", atm, 2000);
+          customer c2 = new customer("john", atm, 1000);
+          customer c3 = new customer("Denver", atm, 4000);
+          customer c4 = new customer("mojito", atm, 7000);
+          customer c5 = new customer("Dyna", atm, 6000);
+
+          c1.start();
+          c2.start();
+          c3.start();
+          c4.start();
+          c5.start();
+
+     }
+}
+
+

@@ -1,0 +1,49 @@
+// Write a java program to demonastrate multithreading.
+
+class mydata{
+    synchronized void display(String str)
+     {
+          for(int i = 0; i < str.length(); i++)
+          {
+               System.out.print(str.charAt(i));
+          }
+          try{
+               Thread.sleep(100);
+          }
+          catch(Exception e){
+               System.out.println(e);
+          }
+     }
+}
+
+class mythread1 extends Thread{
+     mydata d;
+     public mythread1(mydata dat){
+          this.d = dat;
+     }
+
+     public void run(){
+         d.display("hello world");
+     }
+}
+
+class mythread2 extends Thread{
+     mydata data;
+     public mythread2(mydata dat){
+          this.data = dat;
+     }
+
+     public void run(){
+          data.display("Welcome");
+}
+}
+
+public class Multithreading_monitor {
+   public static void main(String args[]){
+     mydata d = new mydata();
+     mythread1 t1 = new mythread1(d);
+     mythread2  t2 = new mythread2(d);
+     t1.start();
+     t2.start();
+   }
+}

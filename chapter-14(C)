@@ -1,0 +1,48 @@
+// Write a java program to demonastrate store - customer example.
+interface member{
+     void callback();
+}
+
+class store 
+{
+     member mem[] = new member[100];
+     int count = 0;
+
+     void register(member m){
+          mem[count++] = m;
+     }
+
+     void invitesale()
+     {
+          for(int i = 0; i < count; i++)
+          {
+               mem[i].callback();
+          }
+     }
+}
+
+class customer implements member{
+     String name;
+
+     customer(String m)
+     {
+          name = m;
+     }
+
+     public void callback()
+     {
+     System.out.println("ok, i will visit," + " " + name);
+     }
+}
+
+public class store_customer {
+     public static void main(String args[])
+     {
+          store s = new store();
+          customer c1 = new customer("John");
+          customer c2 = new customer("smith");
+          s.register(c1);
+          s.register(c2);
+          s.invitesale();
+     }
+}

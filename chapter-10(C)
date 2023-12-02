@@ -1,0 +1,20 @@
+// Write a java program to demonastrate parameter passing.
+class users {
+
+     static String userName(String email)
+     {
+          int a = email.indexOf('@');
+          String name = email.substring(0,a);
+          System.out.println("hello" + " " + email);
+          return name;
+
+     }
+     public static void main(String arg[])
+     {
+          String name = "hello";
+          String email = "Anjalisingh@gmail.com" ;
+          String ans = userName(email);
+          System.out.println(ans);
+
+     }
+}

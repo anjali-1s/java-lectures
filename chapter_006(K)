@@ -1,0 +1,21 @@
+//A.) Write a java program to find if a number is binary or not.
+//B.) Write a java program to find if a number is hexa decimal or not.
+//C.) Write a java program to find id the data is in data format(dd/mm/yy);
+public class String_quantifiers2 {
+     public static void main(String args[])
+     {
+          // A.) --solution
+            int b = 1000110;
+            String str = String.valueOf(b);
+            System.out.println(b);
+            System.out.println(str.matches("[01]+"));
+
+          // B.) --solution
+          String str1 = "234AB";
+          System.out.println(str1.matches("[0-9A-F]+"));
+
+          // C.) --solution
+          String d = "01/02/2000";
+          System.out.println(d.matches("[0-3][0-9]/[01][0-9]/[0-9]{4}"));
+     }
+}

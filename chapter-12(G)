@@ -1,0 +1,42 @@
+// Write an example to demonastrate method overriding.
+class TV
+{
+     public void switchON(){
+          System.out.println("TV is switched ON");
+     }
+
+     public void channelchange()
+     {
+          System.out.println("TV channel is changed");
+     }
+}
+
+class smartTV
+{
+    public void switchON()
+    {
+     System.out.println("smartTV is switched ON");
+    }
+
+    public void channelchange()
+    {
+     System.out.println("smartTV channel is changed");
+    }
+
+    public void browse()
+    {
+     System.out.println("smartTV is browsing");
+    }
+}
+
+public class overriding_examples {
+   public static void main(String args[])
+   {
+      TV obj = new TV();
+      obj.switchON();
+      smartTV t = new smartTV();
+      t.browse();
+      t.channelchange();
+      t.switchON();
+   }  
+}

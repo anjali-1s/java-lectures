@@ -1,0 +1,58 @@
+// Write a java program to demonastrate myhospital example.
+
+abstract class hospitals{
+    hospitals()
+    {
+     System.out.println("hopital class constructor");
+    }
+
+    abstract void emergency();
+    abstract void appointment();
+    abstract void admit();
+    abstract void billing();
+    abstract void discharge();
+}
+
+class myhospital extends hospitals{
+     myhospital()
+     {
+          System.out.println("myhospital class constructor");
+     }
+
+        void emergency()
+     {
+          System.out.println("if its emergency then please admit the patient");
+     }
+
+     void  appointment()
+     {
+          System.out.println("if visiting time is not over the patient can take the appointment to make a visit with the doctor");
+     }
+
+     void admit()
+     {
+          System.out.println("if seats are available then please admit the patient");
+     }
+
+     void billing()
+     {
+          System.out.println("if doctor has approved dischargeing of the patient then he can take his billing receipt from reception");
+     }
+
+     void discharge()
+     {
+          System.out.println("if patient is ok according to doctor then he/she will approved his discharge paper");
+     }
+}
+
+class example{
+     public static void main(String args[])
+     {
+          hospitals hs = new myhospital();
+          hs.emergency();
+          hs.appointment();
+          hs.admit();
+          hs.billing();
+          hs.discharge();
+     }
+}

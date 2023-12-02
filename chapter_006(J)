@@ -1,0 +1,28 @@
+// Write a java program to demonstrate java string methods.
+public class String_method_3 
+{
+   public static void main(String[] args)
+   {
+     String str1 = "pyramid";
+     String str2 = "PYRAMID";
+
+     System.out.println(str1.equals(str2));
+     System.out.println(str1.equalsIgnoreCase(str2));
+
+     System.out.println(str1 == str2);
+
+     String str = new String("pyramid");
+     System.out.println(str.equals(str1));
+     System.out.println(str.compareTo(str2));
+     System.out.println(str.compareTo(str1));
+     System.out.println(str.compareToIgnoreCase(str2));
+
+     String Str3 = "The great wall of china";
+     System.out.println(Str3.contains("wall"));
+
+     String str4 = "The great wall";
+     String str5 = " of china";
+     System.out.println(str4.concat(str5));
+     System.out.println(str4 +" "+ str5);
+   }
+}

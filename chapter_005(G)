@@ -1,0 +1,17 @@
+// Write a java program to demonstrate Bitwise operator.
+
+import java.lang.*;
+import java.util.*;
+class Bitwise
+{
+    public static void main(String[] args)
+{
+ Scanner sc = new Scanner(System.in);
+ int x = 6;
+ int y = 10;
+ int And, xor;
+ And = x & y;
+ xor = x ^ y;
+ System.out.println(And +  " " + xor);
+}
+}

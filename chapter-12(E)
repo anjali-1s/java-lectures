@@ -1,0 +1,49 @@
+// Write a java program to demonastrate this and super keyword.
+class rectangle{
+    public int length;
+    public int breadth;
+    int x = 10;
+    rectangle()
+    {
+       length = breadth = 1;
+    }
+    rectangle(int l,int b)
+    {
+     this.length = l;
+     this.breadth = b;
+    }
+    
+    void display()
+    {
+     System.out.println("length :" + this.length);
+     System.out.println("breadth :" + this.breadth);
+    }
+}
+
+class cuboid extends rectangle{
+     public int height;
+     public int x = 20;
+     cuboid(int l ,int b,int h)
+     {
+          super(l,b);
+          height = h;
+     }
+
+     void display()
+     {
+          System.out.println(super.x);
+          System.out.println(x);
+     }
+
+}
+
+public class this_super {
+     public static void main(String args[])
+     {
+       rectangle rc = new rectangle(10,20);
+       rc.display();
+
+       cuboid c = new cuboid(10,20,30);
+       c.display();
+     }
+}

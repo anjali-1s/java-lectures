@@ -1,0 +1,23 @@
+// Write a java program to demonstrate java string methods.
+public class String_methods_2 
+{
+     public static void main(String args[])
+     {
+        String str = "Mr. Shahrukh khan";
+        System.out.println(str.startsWith("Mr."));
+        System.out.println(str.startsWith("Shah",4));
+        System.out.println(str.endsWith("khan"));
+
+        System.out.println(str.charAt(4));
+
+        for(int i=0; i<str.length(); i++)
+        {
+          System.out.print(str.charAt(i));
+        }
+        System.out.println();
+        String str1 = "www.Udemy.co.in";
+        System.out.println(str1.indexOf('.'));
+        System.out.println(str1.indexOf("Udemy"));
+        System.out.println(str1.indexOf('.',4));
+     }
+}

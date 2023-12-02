@@ -1,0 +1,27 @@
+// Write a java program to demonastrate method overriding.
+class Super{
+    public void display()
+    {
+     System.out.println("hello");
+    }
+}
+
+class subclass extends Super
+{
+    public void display()
+    {
+     System.out.println("hello world");
+    }
+}
+
+public class method_overriding {
+     public static void main(String args[])
+     {
+         Super su = new Super();
+         su.display();
+         subclass sub = new subclass();
+         sub.display();
+         Super su2 = new subclass();
+         su2.display();
+     }
+}

@@ -1,0 +1,29 @@
+// Write a java program to create and diaplay an array.
+
+import java.lang.*;
+import java.util.Scanner;
+
+public class Array_creation {
+    public static void main(String args[])
+    {
+     // creation of an array
+     int arr[] = {2,3,5,7,9,8,12,16};
+     
+     // printing arrays element one by one
+     System.out.println(arr[0]);
+
+     // traverse entire array
+     for(int i = 0; i < arr.length; i++)
+     {
+         System.out.print(arr[i] + " ");
+     }
+       
+     System.out.println();
+     
+     // Another way to traverse
+     for(int x : arr)
+     {
+          System.out.print(x + " ");
+     }
+}
+}

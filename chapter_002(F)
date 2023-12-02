@@ -1,0 +1,14 @@
+// to find set bits of an integer.
+import java.lang.*;
+import java.swing.*;
+import java.awt.*;
+
+class   bits
+{
+   public static void main(String arg[])
+{
+     int x = 2;
+     System.out.println(Integer.toBinaryString(x));
+}
+
+}
